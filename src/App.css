@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main App Container */
+.app {
+  width: 90%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4a4a8e;
+}
+
+/* Add Habit Section */
+.add-habit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.add-habit input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.add-habit input:focus {
+  border-color: #4a4a8e;
+}
+
+.add-habit button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4a4a8e;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-habit button:hover {
+  background-color: #3a3a7a;
+}
+
+/* Habit List Section */
+.habit-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.habit-card {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.habit-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #4a4a8e;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background: #4a4a8e;
+  transition: width 0.3s ease-in-out;
+}
+
+.habit-card p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.mark-done {
+  background-color: #28a745;
+  color: white;
+}
+
+button.mark-done:hover {
+  background-color: #218838;
+}
+
+button.remove {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.remove:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-habit {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .habit-card {
+    padding: 15px;
+  }
+}
